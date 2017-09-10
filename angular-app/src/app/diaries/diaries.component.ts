@@ -9,6 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DiariesComponent implements OnInit {
   post = 'test';
+  userInput = '';
 
   constructor() {}
 
@@ -16,7 +17,7 @@ export class DiariesComponent implements OnInit {
   }
 
   onUserInput(e: any) {
-    console.log(event);
+    this.userInput = (<HTMLInputElement>event.target).value;
+
   }
-  
 }
