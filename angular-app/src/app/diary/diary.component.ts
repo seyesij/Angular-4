@@ -6,4 +6,11 @@ import { Component } from '@angular/core';
 })
 export class DiaryComponent {
     postNumber = 1;
+    // inputs = [];
+    constructor() {
+
+    }
+    // handleUserInput() {
+    //     if
+    // }
 }

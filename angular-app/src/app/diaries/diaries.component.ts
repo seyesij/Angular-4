@@ -10,9 +10,13 @@ import { Component, OnInit } from '@angular/core';
 export class DiariesComponent implements OnInit {
   post = 'test';
 
-  constructor() { }
+  constructor() {}
 
   ngOnInit() {
   }
 
+  onUserInput(e: any) {
+    console.log(event);
+  }
+  
 }
