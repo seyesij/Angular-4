@@ -5,12 +5,14 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { DiaryComponent } from './diary/diary.component';
+import { DiariesComponent } from './diaries/diaries.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    DiaryComponent
+    DiaryComponent,
+    DiariesComponent
   ],
   imports: [
     BrowserModule,
