@@ -1,5 +1,5 @@
 <h1>{{ title }}</h1>
     <input type="text" (input)="onUserInput($event)">
-    <button class="btn btn-primary">Add something we decide lols</button>
+    <button [disabled]="!inputLength" class="btn btn-primary">Add something we decide lols</button>
 
     {{ userInput }}
