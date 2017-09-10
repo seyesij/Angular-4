@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-diaries',
-  templateUrl: './diaries.component.html',
+  template: `
+  <app-diary></app-diary>`,
   styleUrls: ['./diaries.component.css']
 })
 export class DiariesComponent implements OnInit {
