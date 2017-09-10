@@ -1,11 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  template: `
-  <app-diary></app-diary>`,
+  selector: 'app-diaries',
+  // template: `
+  // <app-diary></app-diary>`,
+  templateUrl: './diaries.component.html',
   styleUrls: ['./diaries.component.css']
 })
 export class DiariesComponent implements OnInit {
+  post = 'test';
 
   constructor() { }
 

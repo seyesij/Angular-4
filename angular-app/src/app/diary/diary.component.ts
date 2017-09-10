@@ -5,4 +5,5 @@ import { Component } from '@angular/core';
     templateUrl: './diary.component.html',
 })
 export class DiaryComponent {
+    postNumber = 1;
 }
