@@ -6,7 +6,14 @@
                 <button [disabled]="!userInput"class="btn btn-primary">Add something we decide lols</button>
             <div class="row">
                 <p class="col-md-1">{{ userInput }}</p>
+                <p class="col-md-1">{{ userInput }}</p>
+                <p class="col-md-1">{{ userInput }}</p>
+                <p class="col-md-1">{{ userInput }}</p>
+                <p class="col-md-1">{{ userInput }}</p>                
+                <p *ngIf="  userInput; else noInput"></p>
+                <ng-template #noInput>
                     <p> Add some ~ thougtz ~ </p>
+                </ng-template>
             </div>
         </div>
     </div>
