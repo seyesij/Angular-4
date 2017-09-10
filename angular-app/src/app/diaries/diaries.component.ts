@@ -10,7 +10,6 @@ import { Component, OnInit } from '@angular/core';
 export class DiariesComponent implements OnInit {
   post = 'test';
   userInput = '';
-  inputLength = false;
 
   constructor() {}
 
@@ -18,8 +17,6 @@ export class DiariesComponent implements OnInit {
   }
 
   onUserInput(e: any) {
-    this.inputLength = true;
-    console.log(this.inputLength);
     this.userInput = (<HTMLInputElement>event.target).value;
 
   }

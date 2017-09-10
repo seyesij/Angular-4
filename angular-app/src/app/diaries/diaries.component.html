@@ -1,5 +1,5 @@
 <h1>{{ title }}</h1>
-    <input type="text" (input)="onUserInput($event)">
-    <button [disabled]="!inputLength" class="btn btn-primary">Add something we decide lols</button>
-
-    {{ userInput }}
+    <input type="text" [(ngModel)]="userInput">
+    <button [disabled]="!userInput"class="btn btn-primary">Add something we decide lols</button>
+    <ul> {{ userInput }} </ul>
+    
