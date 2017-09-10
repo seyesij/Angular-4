@@ -1,5 +1,15 @@
-<h1>{{ title }}</h1>
-    <input type="text" [(ngModel)]="userInput">
-    <button [disabled]="!userInput"class="btn btn-primary">Add something we decide lols</button>
-    <ul> {{ userInput }} </ul>
-    
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-xs-8">   
+            <h1>{{ title }}</h1>
+                <input type="text" placeholder="how you doin ~" class="form-control" (input)="onUserInput($event)">
+                <button [disabled]="!userInput"class="btn btn-primary">Add something we decide lols</button>
+            <div class="row">
+                <p class="col-md-1">{{ userInput }}</p>
+                    <p> Add some ~ thougtz ~ </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
