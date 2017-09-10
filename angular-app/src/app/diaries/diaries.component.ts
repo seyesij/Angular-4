@@ -8,7 +8,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./diaries.component.css']
 })
 export class DiariesComponent implements OnInit {
-  post = 'test';
+  posts = ['test', 'test test'];
+  userPost = 'test';
   userInput = '';
 
   constructor() {}
@@ -19,5 +20,9 @@ export class DiariesComponent implements OnInit {
   onUserInput(e: any) {
     this.userInput = (<HTMLInputElement>event.target).value;
 
+  }
+
+  onUserSubmit() {
+    this.posts.push(this.userPost);
   }
 }

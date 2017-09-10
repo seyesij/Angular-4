@@ -2,18 +2,16 @@
     <div class="row">
         <div class="col-xs-8">   
             <h1>{{ title }}</h1>
-                <input type="text" placeholder="how you doin ~" class="form-control" (input)="onUserInput($event)">
-                <button [disabled]="!userInput"class="btn btn-primary">Add something we decide lols</button>
+                <input type="text" placeholder="how you doin ~" class="form-control" [(ngModel)]="userInput">
+                <button (click) = "onUserSubmit()" [disabled]="!userInput"class="btn btn-primary">Add something we decide lols</button>
             <div class="row">
-                <p class="col-md-1">{{ userInput }}</p>
-                <p class="col-md-1">{{ userInput }}</p>
-                <p class="col-md-1">{{ userInput }}</p>
-                <p class="col-md-1">{{ userInput }}</p>
-                <p class="col-md-1">{{ userInput }}</p>                
-                <p *ngIf="  userInput; else noInput"></p>
+                <!-- <p class="col-md-1">{{ userInput }}</p>                 -->
+                <p *ngIf="userInput; else noInput"></p>
                 <ng-template #noInput>
                     <p> Add some ~ thougtz ~ </p>
                 </ng-template>
+
+                <app-diary *ngFor="let post of posts"></app-diary>
             </div>
         </div>
     </div>
