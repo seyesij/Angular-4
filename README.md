@@ -21,7 +21,7 @@ I liked the simplicity of scaffolding " ng g c 'your component' " just like we'v
 Code snippets:
 
 Disabling button until the user starts typing
-<button 
+```<button 
     (click) = "onUserSubmit(postInput)" 
     [disabled]="!userInput"
     class="btn btn-primary">Add to your ~ diary ~</button>                
@@ -29,6 +29,7 @@ Disabling button until the user starts typing
     <ng-template #noInput>
     <p> Add some ~ thougtz ~ </p>
 </ng-template>
+```
 
 Next-
 this comes from the main app.comonent.html,
@@ -38,17 +39,18 @@ another way you can set the selector though is (which in this example below woul
   templateUrl: './diaries.component.html',
 The actual code from the app.component.html is here -
 
-<app-diaries (postCreated)="onDiaryPostSubmit($event)"></app-diaries>
+```<app-diaries (postCreated)="onDiaryPostSubmit($event)"></app-diaries>
     <app-diary *ngFor="let postDat of postData" 
         [inputElement]="postDat" 
         [name]="postDat.name"
         [day]="postDat.day">
     <b #diaryContent> {{postDat.content}}{{postDat.day}} </b>
+ ```
 
 including the postCreated output from the diaries.component.ts class DiariesComponent, and it is inclued in the @Output(), which emits to the onUserSubmit as diaryText e.value, and goes to the onDiaryPostSubmit in the AppComponent, where the content is the diaryPost.diaryText, 
 which then if you look back in the code snippet, there is a *ngFor loop "let postDat of postData" which calls the previously empty postData array  and adds what the user submit. input eleent is now the new inserted postDat[inputElement]="postDat", and the "name" which is here referenced in <b #diaryContent> {{postDat.content}}{{postDat.day}} </b> calls that name.
 
-export class DiariesComponent implements OnInit {
+```export class DiariesComponent implements OnInit {
   userInput = '';
   @Output() postCreated = new EventEmitter<{diaryText: string, day: string}>();
   @ViewChild('postInput') postInput: ElementRef;
@@ -64,9 +66,10 @@ export class DiariesComponent implements OnInit {
       day: e.value,
     });
   }
+  ```
 
 
-export class AppComponent {
+```export class AppComponent {
   title = 'Dan and Seyes awesome Angular';
   postData = [];
 
@@ -79,3 +82,4 @@ onDiaryPostSubmit(diaryPost: {diaryText: string}) {
     });
   }
 }
+```
