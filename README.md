@@ -35,8 +35,10 @@ Next-
 this comes from the main app.comonent.html,
 Here links the <app-diaries> right from the app-diaries component,
 In the app-diaries component, it states selector as - selector: 'app-diaries',
-another way you can set the selector though is (which in this example below would probably make more sense to understand where it is coming from)<app-diaries></app-diaries>`,
+another way you can set the selector though is (which in this example below would probably make more sense to understand where it is coming from)
+```<app-diaries></app-diaries>`,
   templateUrl: './diaries.component.html',
+  ```
 The actual code from the app.component.html is here -
 
 ```<app-diaries (postCreated)="onDiaryPostSubmit($event)"></app-diaries>
@@ -46,17 +48,18 @@ The actual code from the app.component.html is here -
         [day]="postDat.day">
     <b #diaryContent> {{postDat.content}}{{postDat.day}} </b>
  ```
-
 Including the postCreated output from the diaries.component.ts class DiariesComponent, and it is inclued in the @Output(), which emits to the onUserSubmit as diaryText e.value, and goes to the onDiaryPostSubmit in the AppComponent, where the content is the diaryPost.diaryText, which then if you look back in the code snippet, there is a 
-```*ngFor loop "let postDat of postData"
 ```
-which calls the previously empty postData array  and adds what the user submit. input eleent is now the new inserted ```postDat[inputElement]="postDat",
+*ngFor loop "let postDat of postData"
+```
+which calls the previously empty postData array  and adds what the user submit. input eleent is now the new inserted 
+```postDat[inputElement]="postDat",
 ```
 and the "name" which is here referenced in 
-```<b #diaryContent> {{postDat.content}}{{postDat.day}} </b>
+```
+<b #diaryContent> {{postDat.content}}{{postDat.day}} </b>
 ```
 calls that name.
-
 ```export class DiariesComponent implements OnInit {
   userInput = '';
   @Output() postCreated = new EventEmitter<{diaryText: string, day: string}>();
