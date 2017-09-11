@@ -1,0 +1,18 @@
+.column {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+}
+
+button {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.row {
+    border: 1px solid black;
+}
