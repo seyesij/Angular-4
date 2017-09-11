@@ -20,7 +20,6 @@ onDiaryPostSubmit(diaryPost: {diaryText: string}) {
     // type: 'post',
     content: diaryPost.diaryText,
     day: diaryPost.diaryText,
-  });
-}
-
+    });
+  }
 }
