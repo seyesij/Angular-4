@@ -16,7 +16,7 @@
 * To download, clone the repo, cd in to the folder, npm install,
 and just ng serve -o and that will open up on localhost:4200 in your browser
 
-* I liked the simplicity of scaffolding " ng g c 'your component' " just like we've been doing in rails,. And having each files css right there (although didn't spend time doing any). Once I  got a better understanding of a lot of the syntax it started to make more sense. There was a lot more things I wanted to implement but ran out of time, I will definitely come back to angular after this class and learn some more. 
+* I liked the simplicity of scaffolding " ng g c 'your component' " just like we've been doing in rails,. And having each files css right there (although didn't spend time doing any). Once we  got a better understanding of a lot of the syntax it started to make more sense. There were a lot more things we wanted to implement but ran out of time, I will definitely come back to angular after this class and learn some more. 
 
 Code snippets:
 
@@ -47,8 +47,15 @@ The actual code from the app.component.html is here -
     <b #diaryContent> {{postDat.content}}{{postDat.day}} </b>
  ```
 
-including the postCreated output from the diaries.component.ts class DiariesComponent, and it is inclued in the @Output(), which emits to the onUserSubmit as diaryText e.value, and goes to the onDiaryPostSubmit in the AppComponent, where the content is the diaryPost.diaryText, 
-which then if you look back in the code snippet, there is a *ngFor loop "let postDat of postData" which calls the previously empty postData array  and adds what the user submit. input eleent is now the new inserted postDat[inputElement]="postDat", and the "name" which is here referenced in <b #diaryContent> {{postDat.content}}{{postDat.day}} </b> calls that name.
+Including the postCreated output from the diaries.component.ts class DiariesComponent, and it is inclued in the @Output(), which emits to the onUserSubmit as diaryText e.value, and goes to the onDiaryPostSubmit in the AppComponent, where the content is the diaryPost.diaryText, which then if you look back in the code snippet, there is a 
+```*ngFor loop "let postDat of postData"
+```
+which calls the previously empty postData array  and adds what the user submit. input eleent is now the new inserted ```postDat[inputElement]="postDat",
+```
+and the "name" which is here referenced in 
+```<b #diaryContent> {{postDat.content}}{{postDat.day}} </b>
+```
+calls that name.
 
 ```export class DiariesComponent implements OnInit {
   userInput = '';
