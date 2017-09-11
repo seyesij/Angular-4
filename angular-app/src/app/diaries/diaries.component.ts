@@ -1,4 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  EventEmitter,
+  Output,
+  ViewChild,
+  ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-diaries',
@@ -8,21 +14,27 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./diaries.component.css']
 })
 export class DiariesComponent implements OnInit {
-  posts = ['test', 'test test'];
-  userPost = 'test';
+  // posts = ['test', 'test test'];
+  // userPost = 'test';
   userInput = '';
+  @Output() postCreated = new EventEmitter<{diaryText: string}>();
+  @ViewChild('postInput') postInput: ElementRef;
 
   constructor() {}
 
   ngOnInit() {
   }
 
-  onUserInput(e: any) {
+  onUserSubmit(e: HTMLInputElement) {
+    this.postCreated.emit({
+      diaryText: e.value,
+    });
+  }
+
+  onUserInput(e: HTMLInputElement) {
     this.userInput = (<HTMLInputElement>event.target).value;
-
   }
-
-  onUserSubmit() {
-    this.posts.push(this.userPost);
-  }
+  // onUserSubmit() {
+  //   this.posts.push(this.userPost);
+  // }
 }
