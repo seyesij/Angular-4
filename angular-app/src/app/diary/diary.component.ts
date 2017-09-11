@@ -1,10 +1,5 @@
 import {
-    Component,
-    OnInit,
-    Input,
-    ViewChild,
-    ElementRef,
-    ContentChild
+    Component, Input,
 } from '@angular/core';
 
 @Component({
@@ -14,14 +9,14 @@ import {
 })
 export class DiaryComponent {
     // tslint:disable-next-line:no-input-rename (ts lint kept giving me a red underline so had to disable it here)
-    @Input('inputElement') element: {type: string, content: string};
+    @Input('inputElement') element: {type: string, content: string, day: string};
     @Input() name: string;
-    @ViewChild('heading') header: ElementRef;
-    @ContentChild('diaryContent') paragraph: ElementRef;
+    @Input() day: string;
+
     constructor() {
 
-    }
-}
-    // handleUserInput() {
+   // handleUserInput() {
     //     if
     // }
+    }
+}

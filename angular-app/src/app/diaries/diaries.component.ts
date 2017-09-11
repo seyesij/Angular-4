@@ -17,7 +17,8 @@ export class DiariesComponent implements OnInit {
   // posts = ['test', 'test test'];
   // userPost = 'test';
   userInput = '';
-  @Output() postCreated = new EventEmitter<{diaryText: string}>();
+  @Output() postCreated = new EventEmitter<{diaryText: string, day: string}>();
+  // @Output() dayCreated = new EventEmitter<{diarytext: string, day: string}>();
   @ViewChild('postInput') postInput: ElementRef;
 
   constructor() {}
@@ -28,6 +29,7 @@ export class DiariesComponent implements OnInit {
   onUserSubmit(e: HTMLInputElement) {
     this.postCreated.emit({
       diaryText: e.value,
+      day: e.value,
     });
   }
 
