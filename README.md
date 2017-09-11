@@ -1,22 +1,22 @@
-Angular-4 Demo
-Angular is one of the most popular javascript frameworks for creating web apps.
+# Angular-4 Demo
+### Angular is one of the most popular javascript frameworks for creating web apps.
 
-Getting started
+#### Getting started
 
-npm install –g @angular/cli - Install the Angular CLI globally
+#### npm install –g @angular/cli - Install the Angular CLI globally
 
-ng new <new project> - Create a new project
+#### ng new <new project> - Create a new project
 
-cd <new project>
+#### cd <new project>
 
-ng serve - Start the app. Navigate to http://localhost:4200/
+#### ng serve - Start the app. Navigate to http://localhost:4200/
 
-Good way to scaffold a new controller " ng g c <your controller here>
+* Good way to scaffold a new controller " ng g c <your controller here>
 
-To download, clone the repo, cd in to the folder, npm install,
+* To download, clone the repo, cd in to the folder, npm install,
 and just ng serve -o and that will open up on localhost:4200 in your browser
 
-I liked the simplicity of scaffolding " ng g c 'your component' " just like we've been doing in rails,. And having each files css right there (although didn't spend time doing any). Once I  got a better understanding of a lot of the syntax it started to make more sense. There was a lot more things I wanted to implement but ran out of time, I will definitely come back to angular after this class and learn some more. 
+* I liked the simplicity of scaffolding " ng g c 'your component' " just like we've been doing in rails,. And having each files css right there (although didn't spend time doing any). Once I  got a better understanding of a lot of the syntax it started to make more sense. There was a lot more things I wanted to implement but ran out of time, I will definitely come back to angular after this class and learn some more. 
 
 Code snippets:
 
