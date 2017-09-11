@@ -1,12 +1,14 @@
-# Angular-4 Demo
-
+Angular-4 Demo
 Angular is one of the most popular javascript frameworks for creating web apps.
 
-## Getting started
+Getting started
 
-`npm install –g @angular/cli` - Installs Angular 4 globally
+npm install –g @angular/cli - Install the Angular CLI globally
 
-`ng serve` - Starts the app. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+ng new <new project> - Create a new project
 
-## Building the project
+cd <new project>
 
+ng serve - Start the app. Navigate to http://localhost:4200/
+
+Building the project
