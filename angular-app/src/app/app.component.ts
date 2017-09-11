@@ -7,4 +7,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Dan and Seyes awesome Angular';
+  postData = [];
+
+
+onDiaryPostSubmit(diaryPost: {diaryText: string}) {
+  this.postData.push({
+    // type: 'post',
+    content: diaryPost.diaryText,
+  });
+}
+
 }

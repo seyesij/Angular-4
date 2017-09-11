@@ -1,10 +1,9 @@
 <app-header></app-header>
-
-<h1>{{ title }}</h1>
-
-<app-diaries></app-diaries>
-<div app-diaries>
-    <p>
-      diaries works!
-    </p>
-  </div>
+  <h1>{{ title }}</h1>
+    <app-diaries (postCreated)="onDiaryPostSubmit($event)">
+    </app-diaries>
+      <app-diary *ngFor="let postDat of postData" 
+            [inputElement]="postDat" 
+            [name]="postDat.name">
+        <p #diaryContent> {{postDat.content}} </p>
+      </app-diary>
